@@ -1,0 +1,221 @@
+/* fazendo variaveis no CSS */
+
+/* Variáveis CSS auxiliam no entendimento do uso das cores por terem nomes que fazem sentido com o seu uso, consequentemente isso também facilita a atribuição nos elementos HTML. 
+Além desses dois benefícios, facilita na manutenção do código: é possível alterar o valor de alguma cor reescrevendo um único lugar do código. */
+
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030c;
+    --fonte-principal:"inter";
+    --botao-efeito: #84b3ec;
+}
+
+body {
+
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+    padding: 40px;
+    margin-top: 30px;
+
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+/* img:imagens que fazem sentido para o entendimento do usuário
+enquanto o backgroud-image é mais ilustrativo*/
+
+/*  Quando estamos inserindo uma imagem, é importante pensar: essa imagem faz parte do conteúdo da página? 
+Se não, é possível colocá-la como background-image() de algum elemento. */
+
+.principal {
+    background-image: url("img/Background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+    text-align: center;
+    /* text-align: alinha tudo que está dentro do bloco (div) */
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container__botao{
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1rem;
+    color: var(--branco-principal);
+    text-decoration: none;
+    margin-bottom: 1em;
+   
+
+    
+    
+    
+
+}
+
+/* A diferença entre <a> ancor e <button> botão é que o <a> tem a intenção de realizar uma ação
+ao ser clicado,por exemplo "cadastrar" e "enviar" e o button é quando de fato se tem a necessidade de ter um botão 
+como "apagar" e "deletar"  */
+
+.botao__secundario {
+
+    background-color: transparent;
+    color: var(--branco-principal);
+    border:2px solid ;
+
+ 
+   
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__titulo{
+    font-size: 28px;
+    font-weight: 700;
+
+}
+
+.container__image{
+    margin: 1em 0 2em 0;
+
+}
+
+
+.container__caixa{
+    margin: 6em;
+}
+
+/* Margins realmente criam espaço ao redor do elemento e paddings criam dentro dele, ou seja, 
+o padding afasta o conteúdo da borda e não um elemento do outro. Por fim, também podemos configurar valores diferentes para cada lado do elemento e. */
+
+.secundario__image{
+    width: 80%;
+    
+}
+
+.secundario {
+
+    align-items: center;
+    margin: o 10em;
+
+
+}
+
+.descricao__titulo{
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.2em;
+}
+
+.descricao__texto{
+    color: var(--cinza-secundario);
+}
+
+.container__botao{
+    display: flex;
+    margin-top: 1em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__descricao{
+    padding: 2em;
+}
+
+.dispositivos__listas{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+.dispositivos{
+    text-align: center;
+}
+
+.dispositivos__titulo{
+    font-size: 48px;
+    color: var(--branco-principal);
+
+
+}
+
+.lista__lista{
+    font-size: 32px;
+    color: var(--branco-principal);
+
+
+}
+
+.rodape__lista{
+    display:flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1rem;
+    /* Ao fazer no meu código, optei por iniciar estilizando a lista. Para isso, selecionei a classe .rodape__lista e transformei em um flex-container (consequentemente todos os itens ficaram na direção de linha, ou seja, um ao lado do outro) através do display: flex, em seguida centralizei com o justify-content, retirei as bolinhas que aparecem ao lado de cada item com o list-style-type e afastei o topo do titulo do footer com o margin-top. */
+    
+}
+
+.lista__link a{
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1em;
+
+    /* Logo após, foquei diretamente nos links dessa lista com o seletor de classe em conjunto do elemento: .lista__link a. Para essa parte, retirei a decoração do texto com a propriedade text-decoration, alterei a cor para branco com o color e separei um link do outro criando uma margem a esquerda, através da propriedade margin-left. */
+}
+
+.rodape__texto {
+    margin: 1em 0;
+    color: var(--cinza-secundario);
+    font-size: 14px;
+
+    /* Abaixo desses links têm dois textos de sobre a Alura. Seguindo essa ordem, comecei a estiliza-los, selecionando eles pela classe .rodape__texto que os mesmos compartilham. Assim, defini uma margem para cima e baixo (com a propriedade margin), sua cor (color) com o valor da variável –cinza-secundario e o tamanho da fonte (font-size) como 14px. */
+}
+
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+
+    /* E por fim, faltava centralizar todos elementos do rodapé. Então, selecionei a classe desse elemento, a .rodape, definindo o alinhamento do texto com text-align como center. Também construi margens no topo que separaram o footer do fim da página e da seção anterior, além de margens para o lado esquerdo e direito (tudo isso através de uma única propriedade: a margin). */
+}
+
+.lista__link a:hover{
+    color: var(--botao-azul);
+}
+
+.lista__link a:active{
+    color: purple;
+}
+
+.container__botao:hover{
+    background-color: var(--botao-efeito);
+    color:var(--cor-de-fundo);
+}
+/* :focus: é aplicada quando um elemento está em foco, pode ser pelo clique do mouse ou seleção pelo teclado. Um exemplo é quando os campos de escrita em formulários estão selecionados para o usuário escrever.
+
+:hover: detecta quando um usuário está com o mouse em cima do elemento, sem necessariamente estar clicando.
+
+:active: detecta quando o elemento está ativo, quando há uma interação, por exemplo: o link <a> está sendo clicado.
+
+:visited: detecta quando o link <a> já foi visitado, ou seja, se você já clicou anteriormente naquele link.
+
+:link: detecta quando é um link <a> que nunca foi clicado antes. */
+
