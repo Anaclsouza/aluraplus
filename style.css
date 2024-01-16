@@ -219,3 +219,38 @@ o padding afasta o conteúdo da borda e não um elemento do outro. Por fim, tamb
 
 :link: detecta quando é um link <a> que nunca foi clicado antes. */
 
+@media screen and (max-width: 768px) {
+    .container{
+        display: block;
+        background-image: none;
+        /* 
+        o media screen segue como um if só irá funcionar para telas de 768px
+        display block por que  agente não quer mais ocupar o espaço inteiro da pagina e visualmente é melhor que fique em blocos */
+    
+    }
+    .container__image{
+        width: 50vw;
+        /* ocupar 50% da pagina */
+    }
+        .container__caixa{
+            margin: 2em 2em;
+        }
+        .secundario{
+            margin:0;
+            text-align: center;
+    
+    
+        }
+        .secundario__image{
+            width:50vw;
+        }
+    
+        .dispositivos__listas{
+            display: block;
+        }
+    
+        .rodape__lista{
+            display: block;
+        }
+    } 
+
