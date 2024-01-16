@@ -1,5 +1,7 @@
 # aluraplus
   O Alura Plus é um site informativo sobre a junção do Alura+ e o Alura linguas, um projeto desenvolvido com HTML e CSS utilizando ferramentas de estilização como GRID e FLEXBOX.
+
+  Para acessa-lo: https://aluraplus-ten-omega.vercel.app/
   
 
   
